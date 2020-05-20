@@ -1,6 +1,7 @@
-from django.urls import path
-from AppMaster import views
+from django.contrib import admin
+from django.urls import path, include
 
 urlpatterns = [
-		path('', views.index),
+    path('admin/', admin.site.urls),
+    path('', include('AppMaster.urls')),
 ]
